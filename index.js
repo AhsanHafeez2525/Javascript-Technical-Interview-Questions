@@ -47,12 +47,17 @@
 // find second Largest value in array and remove first element in an array in javascript
 // Example array
 let arr = [5, 3, 9, 1, 6, 8];
-
-// Step 1: Find the second largest value
-let largest = Math.max(...arr); // Find the largest value
+let largest = Math.max(...arr);
 let secondLargest = Math.max(...arr.filter((num) => num !== largest)); // Find the second largest value
 console.log("Second Largest:", secondLargest);
 
-// Step 2: Remove the first element from the array
-arr.shift(); // Removes the first element
+arr.shift();
 console.log("Array after removing first element:", arr);
+
+// concat ()
+
+let array1 = [1, 2, 3];
+let array2 = [4, 5, 6];
+
+let mergedArray = array1.concat(array2);
+console.log("Merged Array:", mergedArray);
