@@ -86,3 +86,14 @@ const users = [
 
 const activeUsers = users.filter((user) => user.isActive);
 console.log(activeUsers);
+
+// find
+
+const usersData = [
+  { id: 1, name: "Alice" },
+  { id: 2, name: "Bob" },
+  { id: 3, name: "Charlie" },
+];
+
+const user = usersData.find((user) => user.id === 2);
+console.log(user); // Output: { id: 2, name: 'Bob' }
