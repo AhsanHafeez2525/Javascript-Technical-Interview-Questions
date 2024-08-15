@@ -75,3 +75,14 @@ let arrSplice = [1, 2, 3, 4, 5];
 let splicedArr = arrSplice.splice(1, 2, 10, 20);
 console.log(splicedArr);
 console.log(arrSplice);
+
+// filter
+
+const users = [
+  { name: "Alice", isActive: true },
+  { name: "Bob", isActive: false },
+  { name: "Charlie", isActive: true },
+];
+
+const activeUsers = users.filter((user) => user.isActive);
+console.log(activeUsers);
