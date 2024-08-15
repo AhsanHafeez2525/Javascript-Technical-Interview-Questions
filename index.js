@@ -89,6 +89,7 @@ console.log(activeUsers);
 
 // find
 
+// eg 1
 const usersData = [
   { id: 1, name: "Alice" },
   { id: 2, name: "Bob" },
@@ -96,4 +97,36 @@ const usersData = [
 ];
 
 const user = usersData.find((user) => user.id === 2);
-console.log(user); // Output: { id: 2, name: 'Bob' }
+console.log(user);
+
+// eg 2
+
+const usersAuth = [
+  { id: 1, username: "john_doe", email: "john@example.com" },
+  { id: 2, username: "jane_doe", email: "jane@example.com" },
+];
+
+const userRegister = usersAuth.find(
+  (user) => user.email === "john@example.com"
+);
+if (user) {
+  console.log("User found:", userRegister);
+} else {
+  console.log("User not found");
+}
+
+// findIndex
+
+const tasks = [
+  { id: 1, title: "Task 1", completed: false },
+  { id: 2, title: "Task 2", completed: false },
+  { id: 3, title: "Task 3", completed: false },
+];
+
+const taskIndex = tasks.findIndex((task) => task.id === 2);
+if (taskIndex !== -1) {
+  tasks[taskIndex].completed = true;
+  console.log("Task updated:", tasks[taskIndex]);
+} else {
+  console.log("Task not found");
+}
