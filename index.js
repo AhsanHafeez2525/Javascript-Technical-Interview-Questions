@@ -205,19 +205,47 @@ console.log(obj);
 
 // create a function multiplyByTwo(obj) that multiplies all numerice property values of nums by 2
 
-let nums = {
-  a: 100,
-  b: 200,
-  title: "My nums",
+// let nums = {
+//   a: 100,
+//   b: 200,
+//   title: "My nums",
+// };
+
+// multiplyByTwo(nums);
+
+// function multiplyByTwo(obj) {
+//   for (key in obj) {
+//     if (typeof obj[key] === "number") {
+//       obj[key] = obj[key] *= 2;
+//     }
+//   }
+// }
+// console.log(nums);
+
+// 3
+
+//  output
+
+// important
+
+const a = {};
+
+const b = { key: "b" };
+const c = { key: "c" };
+a[b] = 123;
+a[c] = 456;
+
+console.log(a[b]);
+
+// json.stringify and json.parse
+
+const userName = {
+  name: "ahsan",
+  age: 25,
 };
 
-multiplyByTwo(nums);
-
-function multiplyByTwo(obj) {
-  for (key in obj) {
-    if (typeof obj[key] === "number") {
-      obj[key] = obj[key] *= 2;
-    }
-  }
-}
-console.log(nums);
+// convert to string
+const jsonString = JSON.stringify(userName);
+console.log(jsonString);
+// convert to object
+console.log(JSON.parse(jsonString));
