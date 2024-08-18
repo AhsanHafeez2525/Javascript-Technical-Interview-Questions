@@ -301,3 +301,25 @@ const shape = {
 
 console.log(shape.diameter()); // 20
 console.log(shape.perimeter()); // nan
+
+//  8
+// destructuring
+
+let userAdmin = {
+  name: "mohsin",
+  age: 29,
+  fullName: {
+    first: "naseer",
+    last: "ahmed",
+  },
+};
+// rename
+const name = "noman";
+const { name: myName } = userAdmin;
+const {
+  fullName: { first },
+} = userAdmin;
+
+console.log(name);
+
+console.log(first);
