@@ -246,6 +246,29 @@ const userName = {
 
 // convert to string
 const jsonString = JSON.stringify(userName);
+// local storage
+// localStorage.setItem("userName", jsonString);
+// console.log(JSON.parse(localStorage.getItem("userName")));
 console.log(jsonString);
 // convert to object
 console.log(JSON.parse(jsonString));
+
+// when to use these?
+
+// most common use case storing in local storage like setItem
+
+//  we can't directly store objects in local storage
+
+// 4
+
+// what's the output
+// spread the characters inside an array
+console.log([..."ahsan"]);
+
+// 5
+
+// output
+
+const user = { name: "John", age: 20 };
+const admin = { admin: true, ...user };
+console.log(admin);
