@@ -228,14 +228,14 @@ console.log(obj);
 
 // important
 
-const a = {};
+// const a = {};
 
-const b = { key: "b" };
-const c = { key: "c" };
-a[b] = 123;
-a[c] = 456;
+// const b = { key: "b" };
+// const c = { key: "c" };
+// a[b] = 123;
+// a[c] = 456;
 
-console.log(a[b]);
+// console.log(a[b]);
 
 // json.stringify and json.parse
 
@@ -334,3 +334,18 @@ function getItems(fruitList, favouriteFruit, ...args) {
   return [...fruitList, ...args, favouriteFruit];
 }
 console.log(getItems(["banana", "apple"], "pear", "orange"));
+
+// 10
+
+// output
+
+// object referecing
+
+let c = {
+  greeting: "Hey!",
+};
+let d;
+
+d = c;
+c.greeting = "Hello!";
+console.log(d.greeting);
