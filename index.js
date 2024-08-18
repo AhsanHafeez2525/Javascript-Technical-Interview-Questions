@@ -56,77 +56,126 @@
 
 // concat ()
 
-let array1 = [1, 2, 3];
-let array2 = [4, 5, 6];
+// let array1 = [1, 2, 3];
+// let array2 = [4, 5, 6];
 
-let mergedArray = array1.concat(array2);
-console.log("Merged Array:", mergedArray);
+// let mergedArray = array1.concat(array2);
+// console.log("Merged Array:", mergedArray);
 
 // slice
 
-let arr = [1, 2, 3, 4, 5];
-let slicedArr = arr.slice(1, 4);
-console.log(slicedArr);
-console.log(arr);
+// let arr = [1, 2, 3, 4, 5];
+// let slicedArr = arr.slice(1, 4);
+// console.log(slicedArr);
+// console.log(arr);
 
 // splice
 
-let arrSplice = [1, 2, 3, 4, 5];
-let splicedArr = arrSplice.splice(1, 2, 10, 20);
-console.log(splicedArr);
-console.log(arrSplice);
+// let arrSplice = [1, 2, 3, 4, 5];
+// let splicedArr = arrSplice.splice(1, 2, 10, 20);
+// console.log(splicedArr);
+// console.log(arrSplice);
 
 // filter
 
-const users = [
-  { name: "Alice", isActive: true },
-  { name: "Bob", isActive: false },
-  { name: "Charlie", isActive: true },
-];
+// const users = [
+//   { name: "Alice", isActive: true },
+//   { name: "Bob", isActive: false },
+//   { name: "Charlie", isActive: true },
+// ];
 
-const activeUsers = users.filter((user) => user.isActive);
-console.log(activeUsers);
+// const activeUsers = users.filter((user) => user.isActive);
+// console.log(activeUsers);
 
 // find
 
 // eg 1
-const usersData = [
-  { id: 1, name: "Alice" },
-  { id: 2, name: "Bob" },
-  { id: 3, name: "Charlie" },
-];
+// const usersData = [
+//   { id: 1, name: "Alice" },
+//   { id: 2, name: "Bob" },
+//   { id: 3, name: "Charlie" },
+// ];
 
-const user = usersData.find((user) => user.id === 2);
-console.log(user);
+// const user = usersData.find((user) => user.id === 2);
+// console.log(user);
 
 // eg 2
 
-const usersAuth = [
-  { id: 1, username: "john_doe", email: "john@example.com" },
-  { id: 2, username: "jane_doe", email: "jane@example.com" },
-];
+// const usersAuth = [
+//   { id: 1, username: "john_doe", email: "john@example.com" },
+//   { id: 2, username: "jane_doe", email: "jane@example.com" },
+// ];
 
-const userRegister = usersAuth.find(
-  (user) => user.email === "john@example.com"
-);
-if (user) {
-  console.log("User found:", userRegister);
-} else {
-  console.log("User not found");
-}
+// const userRegister = usersAuth.find(
+//   (user) => user.email === "john@example.com"
+// );
+// if (user) {
+//   console.log("User found:", userRegister);
+// } else {
+//   console.log("User not found");
+// }
 
 // findIndex
 
-const tasks = [
-  { id: 1, title: "Task 1", completed: false },
-  { id: 2, title: "Task 2", completed: false },
-  { id: 3, title: "Task 3", completed: false },
-];
+// const tasks = [
+//   { id: 1, title: "Task 1", completed: false },
+//   { id: 2, title: "Task 2", completed: false },
+//   { id: 3, title: "Task 3", completed: false },
+// ];
 
-const taskIndex = tasks.findIndex((task) => task.id === 2);
-if (taskIndex !== -1) {
-  tasks[taskIndex].completed = true;
-  console.log("Task updated:", tasks[taskIndex]);
-} else {
-  console.log("Task not found");
-}
+// const taskIndex = tasks.findIndex((task) => task.id === 2);
+// if (taskIndex !== -1) {
+//   tasks[taskIndex].completed = true;
+//   console.log("Task updated:", tasks[taskIndex]);
+// } else {
+//   console.log("Task not found");
+// }
+
+// objects
+
+const usersData = {
+  name: "ahsan",
+  age: 25,
+  address: "islamabad",
+  // space between act as a key
+  "Like this property": true,
+};
+
+// modify the property
+usersData.name = "satti";
+// delete the property
+delete usersData.address;
+console.log(usersData);
+// access the property
+console.log(usersData.name);
+console.log(usersData.age);
+
+// access space property
+
+console.log(usersData["Like this property"]);
+
+// delete space property
+
+delete usersData["Like this property"];
+
+// interview question on delete keyword
+
+const func = (function (a) {
+  delete a;
+  return a;
+})(5);
+
+console.log(func);
+
+// output : 5 b/c delete keyword only use when we want to delete properties from an object not a local variable
+
+// add a dynamic key value pairs an object
+
+const property = "firstName";
+
+const lastname = "bilal";
+
+const detail = {
+  [property]: lastname,
+};
+console.log(detail);
