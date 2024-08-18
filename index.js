@@ -189,6 +189,8 @@ for (key in usersData) {
   // access values
   console.log(usersData[key]);
 }
+
+// 1
 // what's the output?
 
 const obj = {
@@ -197,3 +199,25 @@ const obj = {
   a: "three",
 };
 console.log(obj);
+// if you have two keys with same name, the frist key will be replaced and it still in the first position with the last specified value
+
+// 2
+
+// create a function multiplyByTwo(obj) that multiplies all numerice property values of nums by 2
+
+let nums = {
+  a: 100,
+  b: 200,
+  title: "My nums",
+};
+
+multiplyByTwo(nums);
+
+function multiplyByTwo(obj) {
+  for (key in obj) {
+    if (typeof obj[key] === "number") {
+      obj[key] = obj[key] *= 2;
+    }
+  }
+}
+console.log(nums);
