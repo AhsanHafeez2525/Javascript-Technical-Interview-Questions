@@ -142,40 +142,58 @@ const usersData = {
 };
 
 // modify the property
-usersData.name = "satti";
+// usersData.name = "satti";
 // delete the property
-delete usersData.address;
-console.log(usersData);
+// delete usersData.address;
+// console.log(usersData);
 // access the property
-console.log(usersData.name);
-console.log(usersData.age);
+// console.log(usersData.name);
+// console.log(usersData.age);
 
 // access space property
 
-console.log(usersData["Like this property"]);
+// console.log(usersData["Like this property"]);
 
 // delete space property
 
-delete usersData["Like this property"];
+// delete usersData["Like this property"];
 
 // interview question on delete keyword
 
-const func = (function (a) {
-  delete a;
-  return a;
-})(5);
+// const func = (function (a) {
+//   delete a;
+//   return a;
+// })(5);
 
-console.log(func);
+// console.log(func);
 
 // output : 5 b/c delete keyword only use when we want to delete properties from an object not a local variable
 
 // add a dynamic key value pairs an object
 
-const property = "firstName";
+// const property = "firstName";
 
-const lastname = "bilal";
+// const lastname = "bilal";
 
-const detail = {
-  [property]: lastname,
+// const detail = {
+//   [property]: lastname,
+// };
+// console.log(detail);
+
+// we want to loop throught each of its keys and print the values or even the name of the keys
+
+// for in loop
+
+for (key in usersData) {
+  console.log(key);
+  // access values
+  console.log(usersData[key]);
+}
+// what's the output?
+
+const obj = {
+  a: "one",
+  b: "two",
+  a: "three",
 };
-console.log(detail);
+console.log(obj);
