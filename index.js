@@ -272,3 +272,32 @@ console.log([..."ahsan"]);
 const user = { name: "John", age: 20 };
 const admin = { admin: true, ...user };
 console.log(admin);
+
+// 6
+
+// output
+
+const settings = {
+  userlastname: "sayyam",
+  level: 40,
+  health: 90,
+};
+const data = JSON.stringify(settings, ["level", "health"]);
+console.log(data);
+
+// 7
+
+// output this keyword
+
+const shape = {
+  radius: 10,
+  diameter() {
+    // call this function reference to shape object
+    return this.radius * 2;
+  },
+  // call this arrow function reference to window object
+  perimeter: () => 2 * Math.PI * this.radius,
+};
+
+console.log(shape.diameter()); // 20
+console.log(shape.perimeter()); // nan
