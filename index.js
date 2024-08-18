@@ -323,3 +323,14 @@ const {
 console.log(name);
 
 console.log(first);
+
+// 9
+
+// output
+
+// rest parameters
+
+function getItems(fruitList, favouriteFruit, ...args) {
+  return [...fruitList, ...args, favouriteFruit];
+}
+console.log(getItems(["banana", "apple"], "pear", "orange"));
