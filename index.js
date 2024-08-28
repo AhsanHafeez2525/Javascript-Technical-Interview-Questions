@@ -349,3 +349,66 @@ let d;
 d = c;
 c.greeting = "Hello!";
 console.log(d.greeting);
+
+// 9
+
+// output
+
+console.log({ a: 1 } == { a: 1 }); // false
+console.log({ a: 1 } === { a: 1 }); // false
+
+// b/c both are different objects and space in memory
+
+// 10
+
+let person = { name: "cena" };
+
+const members = [person];
+
+person = null;
+console.log(members);
+
+// 11
+
+const value = { number: 10 };
+const multiply = (x = { ...value }) => {
+  console.log((x.number *= 2));
+};
+
+multiply(); // 20
+multiply(); // 20
+multiply(value); // 20
+multiply(value); // 40
+
+// 12
+
+function changeAgeAndReference(person) {
+  person.age = 30;
+  person = { age: 50, name: "John" };
+  return person;
+}
+
+const personObj1 = {
+  name: "Alex",
+  age: 38,
+};
+const personObj2 = changeAgeAndReference(personObj1);
+
+console.log(personObj1); // { name: 'Alex', age: 30 }
+console.log(personObj2); // { age: 50, name: 'John' }
+
+// 13
+// convert string into 1 array
+
+// 1
+const outlet = "orders booking";
+// console.log(outlet.split());
+// console.log(outlet.split(' '));
+
+// 2
+console.log([outlet]);
+// 3
+console.log([...outlet]);
+
+// replace with any character
+console.log(outlet.replace("o", "A"));
